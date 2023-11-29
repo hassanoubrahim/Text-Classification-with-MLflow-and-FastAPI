@@ -18,7 +18,7 @@ def main():
 
 @app.route('/examflask')
 def exam():
-    return render_template('exam.html')
+    return render_template('/templates/exam.html')
 
 @app.route('/examflask/predict', methods=['POST', 'GET'])
 def predict():
