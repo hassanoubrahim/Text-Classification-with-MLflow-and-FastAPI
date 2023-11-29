@@ -3,7 +3,7 @@ import os
 import joblib
 
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='../templates')
 # Get the directory path of the current script
 current_dir = os.path.dirname(__file__)
 from pydantic import BaseModel
