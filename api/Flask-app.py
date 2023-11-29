@@ -16,6 +16,10 @@ class ValidateData(BaseModel):
 def main():
     return "welcome! <br> application 1 :  <a href='examflask/predict'> click here </a>"
 
+@app.route('/examflask')
+def exam():
+    return render_template('exam.html')
+
 @app.route('/examflask/predict', methods=['POST', 'GET'])
 def predict():
     if request.method == "POST":
