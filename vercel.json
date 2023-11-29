@@ -1,14 +1,5 @@
 {
-  "builds": [
-    {
-      "src": "api/Flask-app.py",
-      "use": "@vercel/python"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "api/Flask-app.py"
-    }
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/api/Flask-app" }
   ]
 }
