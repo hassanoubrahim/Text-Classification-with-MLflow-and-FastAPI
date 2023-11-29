@@ -32,12 +32,12 @@
       font-weight: 700;
     }
 
-    .positive {
+    .negative {
       color: red;
       font-weight: 900;
     }
 
-    .negative {
+    .positive{
       color: green;
       font-weight: 900;
     }
@@ -75,19 +75,19 @@
   </h1>
 
   <p class="status">
-    {% if res == 0 %}
+    {% if res == 'positive' %}
     Status : <span class="positive">Positive</span>
-    {% elif res == 1 %}
+    {% elif res == 'negative' %}
     Status : <span class="negative">Negative</span>
     {% endif %}
   </p>
 
-  <h1>Enter Your Review</h1>
-  <form action="http://127.0.0.1:5000/exam/predict" method="POST">
+  <h1>Enter Your Review </h1>
+  <form action="http://127.0.0.1:5000/examflask/predict" method="POST">
     <div class="form-group">
       <label for="review" class="form"></label>
       <textarea id="review" name="review" required
-        placeholder="{{data['review'] if data else 'enter your review'}}"></textarea>
+        placeholder="{{data if data else 'enter your review'}}"></textarea>
       <br><br>
     </div>
 
