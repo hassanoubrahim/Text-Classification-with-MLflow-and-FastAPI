@@ -26,14 +26,12 @@ def predict():
         # transofrm
         vec_file = os.path.join(current_dir, 'models/fitted_vectorizer.pkl')
         vectorizer = joblib.load(open(vec_file, 'rb'))
-        try:
-            model_input = vectorizer.transform(data['review'])
-            res = loaded_model.predict(model_input)
-        except:
-            res = 1
+        model_input = vectorizer.transform([data['review']])
+        res = loaded_model.predict(model_input)
+        print(res[0])
     elif request.method == "GET":
         return render_template('exam.html')
-    return render_template('exam.html', res=res, data = data['review'])
+    return render_template('exam.html', res=res[0], data = data['review'])
 
 
 
