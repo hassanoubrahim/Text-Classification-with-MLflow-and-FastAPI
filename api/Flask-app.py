@@ -25,10 +25,10 @@ def predict():
     if request.method == "POST":
         data = request.form
         d = ValidateData(**data)
-        filename = os.path.join(current_dir, 'models/LR_model.pkl')
+        filename = '/models/LR_model.pkl'
         loaded_model = joblib.load(open(filename, 'rb'))
         # transofrm
-        vec_file = os.path.join(current_dir, 'models/fitted_vectorizer.pkl')
+        vec_file = '/models/fitted_vectorizer.pkl'
         vectorizer = joblib.load(open(vec_file, 'rb'))
         model_input = vectorizer.transform([data['review']])
         res = loaded_model.predict(model_input)
