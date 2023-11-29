@@ -14,30 +14,27 @@ class ValidateData(BaseModel):
 
 @app.route('/')
 def main():
-    return "welcome! <br> application 1 :  <a href='examflask/predict'> click here </a>"
+    return "welcome! <br> application 1 :  <a href='/examflask/predict'> click here </a>"
 
-@app.route('/examflask')
+@app.route('/exam')
 def exam():
     return render_template('exam.html', res=None)
-
 @app.route('/examflask/predict', methods=['POST', 'GET'])
 def predict():
     if request.method == "POST":
         data = request.form
         d = ValidateData(**data)
-        filename = '/models/LR_model.pkl'
+        filename = os.path.join(current_dir, 'models/LR_model.pkl')
         loaded_model = joblib.load(open(filename, 'rb'))
         # transofrm
-        vec_file = '/models/fitted_vectorizer.pkl'
+        vec_file = os.path.join(current_dir, 'models/fitted_vectorizer.pkl')
         vectorizer = joblib.load(open(vec_file, 'rb'))
         model_input = vectorizer.transform([data['review']])
         res = loaded_model.predict(model_input)
         print(res[0])
     elif request.method == "GET":
-        res = None
-        return render_template('exam.html', res=None)
+        return render_template('exam.html')
     return render_template('exam.html', res=res[0], data = data['review'])
-
 
 
 
