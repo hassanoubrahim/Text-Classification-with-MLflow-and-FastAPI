@@ -1,4 +1,3 @@
-# Text-Classification-with-MLflow-and-FastAPI
 # Mlflow
 
 This project demonstrates various steps in the machine learning workflow, including data preprocessing, model training, model tracking, serialization, creating REST APIs, containerization, and consumption.
@@ -23,19 +22,21 @@ in our case it is very that the 3rd model(Logistic Regression) perform better wi
 ### Using Flask
 
 - Create a dedicated application to consume your API.
+![image](https://media.discordapp.net/attachments/1179056718064386200/1179442928867881141/image.png?ex=6579ccd3&is=656757d3&hm=af905470216b0c6d0bae793b32ae37c410312944968b832abf1ab20502dccd47&=&format=webp&width=1271&height=640)
 - Package your application as a container using Docker.
 
 ## How to Run
 
-[Add instructions on how to run your project here.]
+` 
+  - git clone https://github.com/hassanoubrahim/Text-Classification-with-MLflow-and-FastAPI.git
+  - cd Text-Classification-with-MLflow-and-FastAPI
+  - pip install requirments.txt
+  `
+you can run FastApi application using 
+  - python3 fast-api.py
+or you can choose Flask application using
+  - python3 flask-app.py
 
-## Screenshots
-
-[Add screenshots or diagrams here to visualize your project, if applicable.]
-
-## Dependencies
-
-[Include a list of dependencies or prerequisites for running your project.]
 
 ## License
 
@@ -47,5 +48,5 @@ This project is licensed under the [License Name] - see the [LICENSE.md](LICENSE
 
 ## Contact
 
-[Provide your contact information for inquiries or collaboration.]
+If you have any questions please contact us : [Email](mailto:h.oubrahim@yahoo.com)
 
