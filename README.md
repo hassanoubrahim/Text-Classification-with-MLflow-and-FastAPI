@@ -22,7 +22,7 @@ in our case it is very that the 3rd model(Logistic Regression) perform better wi
 ### Using Flask
 
 - Create a dedicated application to consume your API.
-![image](https://media.discordapp.net/attachments/1179056718064386200/1179442928867881141/image.png?ex=6579ccd3&is=656757d3&hm=af905470216b0c6d0bae793b32ae37c410312944968b832abf1ab20502dccd47&=&format=webp&width=1271&height=640)
+![image](https://media.discordapp.net/attachments/1179056718064386200/1179451851142344804/image.png?ex=6579d522&is=65676022&hm=2dedae7a073d3ddfdd75fac783e24a6a1339ae64fd870fe403958e928197ff2d&=&format=webp&width=1271&height=640)
 - Package your application as a container using Docker.
 
 ## How to Run
