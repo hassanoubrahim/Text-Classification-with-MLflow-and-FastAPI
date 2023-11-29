@@ -18,7 +18,7 @@ def main():
 
 @app.route('/examflask')
 def exam():
-    return render_template('/templates/exam.html')
+    return render_template('/templates/exam.html', res=None)
 
 @app.route('/examflask/predict', methods=['POST', 'GET'])
 def predict():
@@ -34,7 +34,8 @@ def predict():
         res = loaded_model.predict(model_input)
         print(res[0])
     elif request.method == "GET":
-        return render_template('exam.html')
+        res = None
+        return render_template('exam.html', res=None)
     return render_template('exam.html', res=res[0], data = data['review'])
 
 
