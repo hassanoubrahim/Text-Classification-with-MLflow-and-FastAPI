@@ -10,10 +10,5 @@
       "src": "/(.*)",
       "dest": "Flask-app.py"
     }
-  ],
-  "functions": {
-    "install_dependencies": {
-      "handler": "install_dependencies.handler"
-    }
-  }
+  ]
 }
