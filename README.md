@@ -26,6 +26,7 @@ in our case it is very that the 3rd model(Logistic Regression) perform better wi
 - Package your application as a container using Docker.
 
 ## How to Run
+download data set from : https://www.kaggle.com/datasets/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews/data?select=IMDB+Dataset.csv
 
 ` 
   - git clone https://github.com/hassanoubrahim/Text-Classification-with-MLflow-and-FastAPI.git
